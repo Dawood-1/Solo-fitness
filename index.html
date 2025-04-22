@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            overflow-x: hidden;
+        }
+        body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            /* color: white; */
+        }
+
+
+        .main-head {
+            width: 100vw;
+            /* background-color: gold;   */
+        }
+
+        .container-head {
+            width: 100%;
+            /* background-color: red; */
+            margin: auto;
+        }
+
+        .img-head {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.781), rgba(0, 0, 0, 0.705)), url('navbar-img.jpg');
+            width: 100%;
+            height: 500px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .nav {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 15%;
+            text-align: center;
+            padding: 5px 5px;
+        }
+
+        .logo h1 {
+            font-size: 25px;
+            color: white;
+        }
+
+        .top-bar-icon,
+        .top-bar-flex {
+            text-align: center;
+            color: white;
+            width: 15%;
+        }
+
+        .top-bar-icon i {
+            font-size: var(--icon-font-size);
+            color: white;
+            padding: 5px 5px;
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            width: 65%;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .fa-bars {
+            display: none;
+            font-size: 22px;
+            color: white;
+            cursor: pointer;
+        }
+
+        @media(max-width:992px) {
+            .fa-bars {
+                display: block;
+            }
+
+            .navbar {
+                position: absolute;
+                display: none;
+                width: 80vw;
+                left: 50%;
+                top: 90px;
+                transform: translateX(-50%);
+                border-radius: 10px;
+                transition: 0.3s ease-in-out;
+                background-color: rgb(221, 78, 78);
+                padding: 20px;
+                z-index: 1000;
+            }
+
+            .navbar a {
+                display: block;
+                margin: 10px 0;
+                color: white;
+                text-align: center;
+            }
+
+            /* Active Class for Navbar */
+            .navbar.nav_menu {
+                display: block;
+            }
+
+            .top-bar-icon,
+            .top-bar-flex {
+                width: 50%;
+            }
+        }
+
+        @media(max-width:768px) {
+            .logo h1 {
+                font-size: 20px;
+            }
+
+        }
+
+        @media(max-width:576px) {
+            .top-bar-icon i {
+                font-size: var(--media-icon-font-size);
+            }
+
+            .top-bar-flex {
+                font-size: var(--media-icon-font-size);
+            }
+
+            .logo {
+                width: 25%;
+            }
+
+            .logo h1 {
+                font-size: 17px;
+            }
+        }
+
+        .second-title-by-navbar {
+            width: 50%;
+            text-align: center;
+            margin-top: 90px;
+            padding-left: 10px;
+            padding-top: 40px;
+            padding-bottom: 20px;
+            /* background-color: red; */
+            color: white;
+            line-height: 40px;
+        }
+
+        .second-title-by-navbar h1 {
+            font-size: 28px;
+        }
+
+        @media(max-width:992px) {
+            .second-title-by-navbar h1 {
+                font-size: 25px;
+            }
+        }
+
+        @media(max-width:768px) {
+            .second-title-by-navbar h1 {
+                font-size: 21px;
+            }
+        }
+
+        @media(max-width:576px) {
+            .second-title-by-navbar {
+                line-height: 30px;
+            }
+
+            .second-title-by-navbar h1 {
+                font-size: 17px;
+                font-weight: bolder;
+
+            }
+        }
+
+        .second-img {
+            background-image: linear-gradient(rgba(187, 175, 175, 0.781), rgba(185, 173, 173, 0.705)), url('beach.jpg');
+            width: 100%;
+            height: 500px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-img {
+            display: flex;
+            justify-content: space-between;
+            /* flex-wrap: wrap; */
+            align-items: center;
+            gap: 20px;
+            width: 90%;
+            /* background-color: red; */
+            margin: auto;
+            margin-top: 60px;
+        }
+
+        /* one card start */
+
+        .card-one {
+            width: 25%;
+            border-radius: 8px;
+            background-color: white;
+            height: 300px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.781), rgba(0, 0, 0, 0.705)), url('flag.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+
+        }
+
+        .card-title-one {
+            margin-top: 100px;
+            padding-top: 90px;
+        }
+
+        .card-title-one button {
+            margin-top: 5px;
+            padding: 8px 8px;
+            background-color: rgb(11, 125, 170);
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .card-one h1 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .card-one p {
+            font-size: 13px;
+            padding: 2px 2px;
+
+        }
+
+        /* one card End */
+
+        /* two card start */
+        .card-two {
+            width: 25%;
+            border-radius: 8px;
+            background-color: white;
+            height: 300px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.781), rgba(0, 0, 0, 0.705)), url('coved.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+
+        }
+
+        .card-title-two {
+            margin-top: 100px;
+            padding-top: 90px;
+        }
+
+        .card-title-two button {
+            margin-top: 5px;
+            padding: 8px 8px;
+            background-color: rgb(11, 125, 170);
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .card-two h1 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .card-two p {
+            font-size: 13px;
+            padding: 2px 2px;
+
+        }
+
+        /* two card End*/
+
+        /* three card start */
+
+
+        .card-three {
+            width: 25%;
+            border-radius: 8px;
+            background-color: white;
+            height: 300px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.781), rgba(0, 0, 0, 0.705)), url('handwash.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+
+        }
+
+        .card-title-three {
+            margin-top: 100px;
+            padding-top: 90px;
+        }
+
+        .card-title-three button {
+            margin-top: 5px;
+            padding: 8px 8px;
+            background-color: rgb(11, 125, 170);
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .card-three h1 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .card-three p {
+            font-size: 13px;
+            padding: 2px 2px;
+
+        }
+
+        /* three card End*/
+
+
+
+        @media(max-width:992px) {
+            .card-one {
+                width: 32%;
+            }
+
+            .card-one h1 {
+                font-size: 18px;
+            }
+
+            .card-one p {
+                font-size: 11px;
+            }
+
+            .card-two {
+                width: 32%;
+            }
+
+            .card-two h1 {
+                font-size: 18px;
+            }
+
+            .card-two p {
+                font-size: 11px;
+            }
+
+
+
+            .card-three {
+                width: 32%;
+            }
+
+            .card-three h1 {
+                font-size: 18px;
+            }
+
+            .card-three p {
+                font-size: 11px;
+            }
+
+
+        }
+
+        @media(max-width:768px) {
+            .card-one {
+                width: 38%;
+                height: 250px;
+
+            }
+
+            .card-one h1 {
+                font-size: 15px;
+            }
+
+            .card-one p {
+                font-size: 9px;
+            }
+
+            .card-title-one {
+                margin-top: 70px;
+                padding-top: 70px;
+            }
+
+            .card-title button {
+                margin-top: 5px;
+                padding: 4px 4px;
+                font-size: 10px;
+
+            }
+
+
+
+            .card-two {
+                width: 38%;
+                height: 250px;
+
+            }
+
+            .card-two h1 {
+                font-size: 15px;
+            }
+
+            .card-two p {
+                font-size: 9px;
+            }
+
+            .card-title-two {
+                margin-top: 70px;
+                padding-top: 70px;
+            }
+
+            .card-title-two button {
+                margin-top: 5px;
+                padding: 4px 4px;
+                font-size: 10px;
+
+            }
+
+
+            .card-three {
+                width: 38%;
+                height: 250px;
+
+            }
+
+            .card-three h1 {
+                font-size: 15px;
+            }
+
+            .card-three p {
+                font-size: 9px;
+            }
+
+            .card-title-three {
+                margin-top: 70px;
+                padding-top: 70px;
+            }
+
+            .card-title-three button {
+                margin-top: 5px;
+                padding: 4px 4px;
+                font-size: 10px;
+
+            }
+
+
+
+        }
+
+        @media(max-width:576px) {
+            .card-img {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                gap: 30px;
+                align-items: center;
+            }
+
+            .card-one {
+                width: 85%;
+            }
+
+            .card-two {
+                width: 85%;
+            }
+
+            .card-three {
+                width: 85%;
+            }
+        }
+
+
+        .main-of-video-card {
+            width: 100vw;
+            background-color: white;
+            margin-top: 50px;
+        }
+
+        .container-of-video-card {
+            width: 95%;
+            background-color: white;
+            margin: auto;
+        }
+
+        .title-of-video-card {
+            text-align: center;
+            color: rgb(4, 84, 116);
+        }
+        .card-of-flex{
+            width: 100%;
+            background-color: white;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .card-one-video iframe{
+            border-radius: 10px;
+            margin-top: 10px;
+            width: 400px;
+            height: 350px;
+        }
+
+        .title-of-video-card{
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        
+
+
+
+        @media(max-width:992px) {
+            .card-one-video iframe{
+                width: 350px;
+                height: 350px;
+            }
+            .title-of-video-card h1{
+            font-size: 22px;
+        }
+
+        }
+
+        @media(max-width:768px) {
+            .card-one-video iframe{
+                width: 250px;
+                height: 300px;
+            }
+            .title-of-video-card h1{
+            font-size: 20px;
+        }
+
+        }
+
+        @media(max-width:576px) {
+            .card-one-video iframe{
+                width: 145px;
+                height: 220px;
+            }
+            .title-of-video-card h1{
+            font-size: 17px;
+        }
+
+        }
+        .main-by-fitness{
+            width: 100vw;
+            /* background-color: red; */
+            margin-top: 40px;
+            margin-bottom: 50px;
+        }
+
+        .container-by-fitness{
+            width: 98%;
+            margin: auto;
+            background-color: rgb(168, 60, 10);
+        }
+
+
+        .fitness-by-img{
+            width: 100%;
+            background-color: white;
+            border-radius: 5px;
+            height: 500px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.781), rgba(0, 0, 0, 0.705)), url('jogging.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+            margin: auto;
+
+        }
+        .fitness-flex{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: auto;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .fitness-by-title{
+            width: 40%;
+            padding: 40px 5px 5px 5px ;
+            line-height: 25px;
+        }
+        .fitness-by-img-two{
+            margin-top: 80px;
+            width: 40%;
+            padding: 5px 10px 5px 10px;
+            background-color: white;
+            border-radius: 10px;
+            height: 350px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.781), rgba(0, 0, 0, 0.705)), url('man.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+          
+        }
+
+        .fitness-by-title h1{
+           /* font-size: 25px; */
+           padding-bottom: 10px;
+        }
+
+
+
+        /* second part of images start */
+
+
+        .fitness-flex-three{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: auto;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .fitness-by-title-two{
+            width: 40%;
+            padding: 40px 5px 5px 5px ;
+            line-height: 25px;
+        }
+        .fitness-by-img-three{
+            margin-top: 80px;
+            width: 40%;
+            padding: 5px 10px 5px 10px;
+            background-color: white;
+            border-radius: 10px;
+            height: 350px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.781), rgba(0, 0, 0, 0.705)), url('tech.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+          
+        }
+
+        .fitness-by-title-two h1{
+           font-size: 25px;
+           padding-bottom: 10px;
+        }
+                /* second part of images END */
+
+                /* three part of images START */
+
+
+            .fitness-by-img-main-five{
+            width: 100%;
+            background-color: white;
+            /* border-radius: 5px; */
+            height: 500px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.781), rgba(0, 0, 0, 0.705)), url('handwash.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+            margin: auto;
+
+        }
+        .fitness-flex-five{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: auto;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .fitness-by-title-five{
+            width: 40%;
+            padding: 40px 5px 5px 5px ;
+            line-height: 25px;
+        }
+        .fitness-by-img-five{
+            margin-top: 80px;
+            width: 40%;
+            padding: 5px 10px 5px 10px;
+            background-color: white;
+            border-radius: 10px;
+            height: 350px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.781), rgba(0, 0, 0, 0.705)), url('navbar-img.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+          
+        }
+
+        .fitness-by-title-five h1{
+           font-size: 25px;
+           padding-bottom: 10px;
+        }
+
+                /* three part of images END */
+
+
+
+        @media(max-width:992px){
+            
+            .fitness-by-title h1{
+           font-size: 25px;
+         
+        }
+        .fitness-by-title p{
+           font-size: 14px;
+        }
+        .fitness-by-img-two{
+            width: 45%;
+            height: 250px;
+        }
+
+                        /* second part of images start */
+
+        .fitness-by-title-two h1{
+           font-size: 25px;
+        }
+        .fitness-by-title-two p{
+           font-size: 14px;
+        }
+        .fitness-by-img-three{
+            width: 45%;
+            height: 250px;
+        }
+                /* second part of images END */
+
+                 /* three part of images start */
+
+        .fitness-by-title-five h1{
+           font-size: 25px;
+        }
+        .fitness-by-title-five p{
+           font-size: 14px;
+        }
+        .fitness-by-img-five{
+            width: 45%;
+            height: 250px;
+        }
+                /* three part of images END */
+
+
+        }
+        @media(max-width:768px){
+            .fitness-by-title{
+            width: 40%;
+            line-height: 20px;
+        }
+            .fitness-by-title h1{
+           font-size: 22px;
+        }
+        .fitness-by-title p{
+           font-size: 12px;
+        }
+        .fitness-by-img-two{
+            width: 50%;
+            height: 220px;
+        }
+
+                        /* second part of images start */
+
+
+        .fitness-by-title-two{
+            width: 40%;
+            line-height: 20px;
+        }
+            .fitness-by-title-two h1{
+           font-size: 22px;
+        }
+        .fitness-by-title-two p{
+           font-size: 12px;
+        }
+        .fitness-by-img-three{
+            width: 50%;
+            height: 220px;
+        }
+                /* second part of images END */
+
+                /* three part of images start */
+
+
+        .fitness-by-title-five{
+            width: 40%;
+            line-height: 20px;
+        }
+            .fitness-by-title-five h1{
+           font-size: 22px;
+        }
+        .fitness-by-title-five p{
+           font-size: 12px;
+        }
+        .fitness-by-img-five{
+            width: 50%;
+            height: 220px;
+        }
+                /* three part of images END */
+
+
+        }
+        @media(max-width:576px){
+            .fitness-flex{
+                margin-top:5px;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            /* gap: 40px; */
+            align-items: center;
+           
+        }
+            .fitness-by-title{
+            width: 80%;
+            line-height: 28px;
+        }
+            .fitness-by-title h1{
+           font-size: 22px;
+        }
+        .fitness-by-title p{
+           font-size: 12px;
+        }
+        .fitness-by-img-two{
+            width: 80%;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+
+
+        /*  dsf*/
+
+        .fitness-flex-three{
+                margin-top:5px;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            /* gap: 40px; */
+            align-items: center;
+           
+        }
+
+        .fitness-by-title-two{
+            width: 80%;
+            line-height: 28px;
+        }
+            .fitness-by-title-two h1{
+           font-size: 22px;
+        }
+        .fitness-by-title-two p{
+           font-size: 12px;
+        }
+        .fitness-by-img-three{
+            width: 80%;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+
+          /* three part of images start */
+
+          .fitness-flex-five{
+                margin-top:5px;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            /* gap: 40px; */
+            align-items: center;
+           
+        }
+
+        .fitness-by-title-five{
+            width: 80%;
+            line-height: 28px;
+        }
+            .fitness-by-title-five h1{
+           font-size: 22px;
+        }
+        .fitness-by-title-five p{
+           font-size: 12px;
+        }
+        .fitness-by-img-five{
+            width: 80%;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+
+
+          /* three part of images start */
+
+        }
+
+
+        .footer{
+            background-color: black;
+            width: 100vw;
+
+        }
+        .footer-flex{
+            width: 85%;
+            background-color: black;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .one-footer{
+            line-height: 35px;
+            padding-top: 50px;
+            margin-bottom: 20px;
+            color: white;
+        }
+        .one-footer h2{
+            font-size: 20px;
+        }
+        .one-footer input[type='text']{
+            padding: 5px 5px;
+            width: 95%;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .one-footer button{
+            width: 70%;
+            background-color: rgb(9, 108, 148);
+            color: white;
+            padding: 8px 8px;
+            border-radius: 15px;
+        }
+        @media(max-width:768px){
+            .footer-flex{
+            
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            gap: 30px;
+            
+        }
+        }
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="main-head">
+        <div class="container-head">
+            <div class="img-head">
+                <div class="nav">
+                    <div class="logo">
+                        <h1>Solo <br>Traveler</h1>
+                    </div>
+                    <div class="navbar">
+                        <a href="#">HOME</a>
+                        <a href="#">MEET ME</a>
+                        <a href="#">SOLO FITNESS</a>
+                        <a href="#">SOLO NEWS</a>
+                        <a href="#">SOLO ART DESIGN</a>
+                        <a href="#">BLOG</a>
+                    </div>
+
+                    <div class="top-bar-icon ">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-square-twitter"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                    <i class="fa-solid fa-bars" onclick="show_menu()"></i>
+                </div>
+                <div class="second-title-by-navbar">
+                    <h1>AN OPPORTUNITY <br> FOR TRAVEL <br>ADDICTS</h1>
+                </div>
+            </div>
+
+
+            <div class="second-img">
+                <div class="card-img">
+                    <!--   card one start -->
+                    <div class="card-one">
+                        <div class="card-title-one">
+                            <h1>CAR GIFT SCHEME</h1>
+                            <P>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut facere obcaecati
+
+                            </P>
+                            <button> READ MORE</button>
+                        </div>
+                    </div>
+                    <!--   card one end -->
+
+                    <!--   card two start -->
+                    <div class="card-two">
+                        <div class="card-title-two">
+                            <h1>CAR GIFT SCHEME</h1>
+                            <P>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut facere obcaecati
+
+                            </P>
+                            <button> READ MORE</button>
+                        </div>
+                    </div>
+                    <!--   card two End -->
+
+                    <!--   card three start -->
+                    <div class="card-three">
+                        <div class="card-title-three">
+                            <h1>CAR GIFT SCHEME</h1>
+                            <P>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut facere obcaecati
+
+                            </P>
+                            <button> READ MORE</button>
+                        </div>
+                    </div>
+                    <!--   card three End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+                    <!--  video card start  -->
+
+    <div class="main-of-video-card">
+        <div class="container-of-video-card">
+            <div class="title-of-video-card">
+                <h1>FIND US ON YOUTUBE</h1>
+            </div>
+            <div class="card-of-flex">
+                <div class="card-one-video">
+                    <iframe src="https://www.youtube.com/embed/Zi_XLOBDo_Y"
+                        title="YouTube video player" frameborder="0" allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="card-one-video">
+                    <iframe  src="https://www.youtube.com/embed/Zi_XLOBDo_Y"
+                        title="YouTube video player" frameborder="0" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            <div class="card-of-flex">
+                <div class="card-one-video">
+                    <iframe src="https://www.youtube.com/embed/Zi_XLOBDo_Y"
+                        title="YouTube video player" frameborder="0" allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="card-one-video">
+                    <iframe  src="https://www.youtube.com/embed/Zi_XLOBDo_Y"
+                        title="YouTube video player" frameborder="0" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+            <!--  video card End -->
+               <!--  Fitnes card End -->
+               <div class="main-by-fitness">
+                    <div class="container-by-fitness">
+                        <div class="fitness-by-img">
+
+                            <div class="fitness-flex">
+                                <div class="fitness-by-title">
+                                    <h1>SOLO FITNESS </h1> 
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, 
+                                        voluptates assumenda mollitia ipsum laudantium totam ratione distinctio ea eos consequatur!
+                                        voluptates assumenda mollitia ipsum laudantium totam ratione distinctio ea eos consequatur!
+                                    </p>
+                                </div>
+    
+                                <div class="fitness-by-img-two">
+                                    
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                        
+               </div>
+
+
+
+               <div class="fitness-flex-three" style="margin-bottom: 40px;">
+
+                <div class="fitness-by-img-three">
+                    
+                </div>
+                <div class="fitness-by-title-two">
+                    <h1 style=" color: rgb(4, 84, 116);">SOLO FITNESS </h1> 
+                    <p style=" color: rgb(4, 84, 116);">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, 
+                        voluptates assumenda mollitia ipsum laudantium totam ratione distinctio ea eos consequatur!
+                        voluptates assumenda mollitia ipsum laudantium totam ratione distinctio ea eos consequatur!
+                    </p>
+                </div>
+            </div>
+
+
+
+             <div class="fitness-by-img-main-five">
+
+                            <div class="fitness-flex-five">
+                                <div class="fitness-by-title-five">
+                                    <h1>SOLO FITNESS </h1> 
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, 
+                                        voluptates assumenda mollitia ipsum laudantium totam ratione distinctio ea eos consequatur!
+                                        voluptates assumenda mollitia ipsum laudantium totam ratione distinctio ea eos consequatur!
+
+
+                                    </p>
+                                </div>
+    
+                                <div class="fitness-by-img-five">
+                                    
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+                        <div class="footer">
+                            <div class="footer-flex flex">
+                                <div class="one-footer">
+                                    <h2> JOIN THE NEZSLETTER</h2>
+                                    <h3>Lorem ipsum dolor sit.</h3>
+                                    <input type="text" name="" id="" placeholder="Email"> <br>
+                                    <button>SUBCRIBE</button>
+                                </div>
+                                <div class="one-footer">
+                                    <h2> CONTACT</h2>
+                                    <h4>+1403232344544</h4>
+                                    <h4>hello12@Gmail.com</h4>
+                                    <h4>SUDIA ARABIA</h4>
+                                </div>
+                                <div class="one-footer">
+                                    <h2> FROM THE BLOG</h2>
+                                    <h4>YOGA BENIFITS</h4>
+                                    <h4>SEHHAT APP</h4>
+                                </div>
+                            </div>
+                        </div>
+               
+
+                   
+ 
+
+                    
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function show_menu() {
+            let navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('nav_menu');
+        }
+
+    </script>
+
+</body>
+
+</html>
